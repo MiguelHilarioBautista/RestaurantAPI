@@ -7,12 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.patron.mx.puntodeventa.entities.Restaurant;
+import com.patron.mx.puntodeventa.entities.Turn;
 
 @Repository
-public interface RestaurantRepository extends JpaRepository<Restaurant, Long>{
-	Optional<Restaurant> findById(Long id);
+public interface TurnRepository extends JpaRepository<Turn, Long>{
+
+	Optional<Turn> findById(Long id);
 	
-	@Query("SELECT REST FROM Restaurant REST")
-	List<Restaurant> getAllRestaurant();
+	@Query("SELECT TU FROM Turn TU")
+	List<Turn> getAllTurn();
 }

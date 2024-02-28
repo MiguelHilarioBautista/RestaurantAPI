@@ -35,6 +35,6 @@ public class Reservation {
 	private String turn;
 	
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
+    @JoinColumn(name = "idRestaurant")
     private Restaurant restaurant;
 }

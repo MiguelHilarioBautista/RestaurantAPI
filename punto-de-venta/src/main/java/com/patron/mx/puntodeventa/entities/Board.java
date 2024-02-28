@@ -26,7 +26,7 @@ public class Board {
     private int number;
 
     @ManyToOne
-    @JoinColumn(name = "restaurant_id")
+    @JoinColumn(name = "idRestaurant")
     private Restaurant restaurant;
 	
 }

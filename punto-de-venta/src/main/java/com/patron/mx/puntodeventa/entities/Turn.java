@@ -10,10 +10,11 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "turn", schema = "public")
-@Data
 public class Turn {
+	
 	@Id
 	@Column(name = "turn_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,6 @@ public class Turn {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "restaurant_id")
+    @JoinColumn(name = "idRestaurant")
     private Restaurant restaurant;
 }
