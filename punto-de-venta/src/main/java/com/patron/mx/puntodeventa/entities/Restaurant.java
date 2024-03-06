@@ -19,9 +19,9 @@ import lombok.Data;
 public class Restaurant {
 
 	@Id
-	@Column(name = "restaurant_id")
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
-	private int idRestaurant;
+	@Column(name = "restaurant_id")
+	private int restaurantId;
 	
 	@Column(name = "name")
 	private String name;
@@ -43,4 +43,5 @@ public class Restaurant {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "restaurant")
 	private List<Turn> turns;
+	
 }

@@ -11,9 +11,9 @@ import com.patron.mx.puntodeventa.entities.Turn;
 
 @Repository
 public interface TurnRepository extends JpaRepository<Turn, Long>{
-
+	@Query("SELECT tu FROM Turn tu JOIN FETCH tu.restaurant WHERE tu.turnId=?1 ORDER BY tu.turnId DESC")
 	Optional<Turn> findById(Long id);
 	
-	@Query("SELECT TU FROM Turn TU")
-	List<Turn> getAllTurn();
+	@Query("SELECT tu FROM Turn tu JOIN FETCH tu.restaurant ORDER BY tu.turnId DESC")
+	Optional<List<Turn>> getAllTurn();
 }

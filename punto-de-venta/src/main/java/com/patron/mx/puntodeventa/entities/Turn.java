@@ -24,6 +24,6 @@ public class Turn {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "idRestaurant")
+    @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 }
